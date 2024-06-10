@@ -57,3 +57,16 @@
     margin-top: 50px; /* Adjust margin to prevent overlap with carousel */
 }
 
+.pagination-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}

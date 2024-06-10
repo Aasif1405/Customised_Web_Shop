@@ -6,6 +6,7 @@ export class Product {
         this.description = description;
     }
 
+    // Method to convert the product object to a string
     toString() {
         return `${this.name} - $${this.price}, Stock: ${this.stock}, Description: ${this.description}`;
     }

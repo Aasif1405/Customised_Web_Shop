@@ -29,7 +29,7 @@
                         <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fas fa-user-tie"></i> About</a>
+                        <a class="nav-link" href="about.html"><i class="fas fa-user-tie"></i> About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add.html"><i class="fas fa-plus"></i> Add</a>
@@ -66,10 +66,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Perfume rows will be dynamically inserted here -->
+                <!-- Perfume rows will be dynamically inserted here when it is triggered -->
             </tbody>
         </table>
-        <!-- Pagination -->
+        <!-- Pagination - for bonus mark -->
         <nav>
             <ul class="pagination" id="pagination"></ul>
         </nav>
@@ -85,7 +85,7 @@
     <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 Mohammed Aasif, INC</p>
 </footer>
 
-<!-- Confirmation for deleting the perfume -->
+<!-- Confirmation for deleting the Item -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -107,6 +107,8 @@
 <!-- Scripting Section -->
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module" src="./app/list.js"></script>
+<script type="module" src="./app/add.js"></script>
+<script type="module" src="./app/edit.js"></script>
 
 </body>
 </html>
