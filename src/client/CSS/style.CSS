@@ -1,0 +1,59 @@
+.back_video {
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    z-index: -1;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-family: "Bahnschrift", monospace;
+    font-size: 80px;
+    position: center;
+    color: #080808;
+    font-weight: 600;
+}
+
+
+
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.h2{
+    margin: 0 10px;
+    color: #0f3057;
+    text-decoration: none;  
+}
+
+.nav-link {
+    margin: 0 10px;
+    color: #0f3057;
+    text-decoration: none;
+}
+
+.carousel-item img {
+    height: 500px; /* Adjust image height */
+    object-fit: cover; /* Ensure images cover the entire carousel */
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* Text color */
+}
+.carousel-caption h5 {
+    font-size: 2rem; /* Larger font size for headings */
+}
+.carousel-caption p {
+    font-size: 1.5rem; /* Larger font size for paragraphs */
+}
+.content {
+    margin-top: 50px; /* Adjust margin to prevent overlap with carousel */
+}
+

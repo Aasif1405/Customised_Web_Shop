@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Brand logo -->
+            <a class="navbar-brand" href="index.html"><i class="fa-brands fa-shopify"></i> AURA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"> <i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"> <i class="fas fa-user-tie"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add.html"> <i class="fas fa-plus"></i> Add</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> <i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html"> <i class="fas fa-list"></i> Perfume List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container" id="team">
+    <video src="img/video-01.mp4" muted loop autoplay class="back_video"></video>
+    <br>
+    <h2>About Us</h2>
+    <br>
+    <div class="row" id="teamGrid">
+        <!-- Website Author-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/Image.jpeg" class="card-img-top" alt="Team Lead">
+                <div class="card-body">
+                    <h5 class="card-title">Mohammed Aasif Mohammed Sadhak</h5>
+                    <p class="card-text">Full Stack Developer</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#team_lead">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modals -->
+    <div class="modal fade" id="team_lead" tabindex="-1" aria-labelledby="team_leadLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="team_leadLabel">Mohammed Aasif Mohammed Sadhak</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Dear Manager of Hiring,</p>
+                    <p>I am Mohammed Aasif Mohammed Sadhak and I'm from India. As a Full Stack Designer with a profound energy for innovation, I have leveled up my abilities in both front-end and back-end advancement, making me a flexible and skilled supporter of any advancement group.</p>
+                    <p>Throughout the long term, I have fostered a strong fascination with making web applications that capability consistently as well as proposition a natural and drawing in client experience. My interest in the construction of websites sparked my interest in pursuing a career in web development where I could combine creativity and technical expertise.</p>
+                    <p>My experience remembers working for different undertakings going from basic static sites to complex unique web applications. I'm capable in a few programming dialects and structures, including HTML, CSS, JavaScript, Respond, Node.js, and then some. I am able to approach problems from a variety of perspectives and provide high-quality solutions thanks to my diverse skill set.</p>
+                    <p>As I close to the finish of my scholastic process, I'm eager to investigate open positions where I can apply my abilities and information in true situations. I'm especially inspired by places that permit me to add to creative tasks, team up with gifted experts, and keep learning and developing as an engineer.</p>
+                    <p>In addition to my technical skills, I strongly support teamwork and communication. I believe that working together toward a common objective yields the best results. I'm certain that my commitment, energy, and range of abilities will have a constructive outcome in your group.</p>
+                    <p>I appreciate your consideration of my application. I am eager to have a conversation about how I can support your organization and ensure the success of your projects.</p>
+                    <p>Sincerely,</p>
+                    <p>Mohammed Aasif Mohammed Sadhak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p class="mt-5 mb-3 text-muted text-center">
+        <a href="about.html" style="color: #f21515; text-decoration: underline;">About Us</a>
+        <span> | </span>
+        <a href="contact.html" style="color: #f21515; text-decoration: underline;">Contact Us</a>
+    </p>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 Mohammed Aasif, INC</p>
+</footer>
+
+<!--<Scripting Section>-->
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

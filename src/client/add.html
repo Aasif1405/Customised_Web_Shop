@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <title>Add Perfume</title>
+
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <!-- Brand logo -->
+            <a class="navbar-brand" href="index.html"><i class="fa-brands fa-shopify"></i> AURA</a>
+            <!-- Navigation Links -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> <i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"> <i class="fas fa-user-tie"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add.html"> <i class="fas fa-plus"></i> Add</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> <i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html"> <i class="fas fa-list"></i> Perfume List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="container">
+    <!-- Background Video -->
+    <video src="img/video-01.mp4" muted loop autoplay class="back_video"></video>
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Add New Perfume</h1>
+        <div class="row justify-content-lg-center">
+            <!-- Perfume Form -->
+            <form id="perfume-form" class="col-lg-6 col-md-8 col-sm-10">
+                <!-- Perfume Name Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Perfume Name</span>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <p class="text-danger d-none">This is where the error message will go.</p>
+                </div>
+                <!-- Brand Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Brand</span>
+                    <input type="text" class="form-control" id="brand" name="brand" required>
+                    <p class="text-danger d-none">This is where the error message will go.</p>
+                </div>
+                <!-- Volume Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Volume (ml)</span>
+                    <input type="number" class="form-control" id="volume" name="volume" required>
+                    <p class="text-danger d-none">This is where the error message will go.</p>
+                </div>
+                <!-- Price Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Price ($)</span>
+                    <input type="number" class="form-control" id="price" name="price" step="0.01" required>
+                    <p class="text-danger d-none">This is where the error message will go.</p>
+                </div>
+                <!-- Description Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Description</span>
+                    <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    <p class="text-danger d-none">This is where the error message will go.</p>
+                </div>
+                <!-- Save Button -->
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Perfume</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p class="mt-5 mb-3 text-muted text-center">
+        <a href="about.html" style="color: #f21515; text-decoration: underline;">About Us</a>
+        <span> | </span>
+        <a href="contact.html" style="color: #f21515; text-decoration: underline;">Contact Us</a>
+    </p>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 Your Name, AURA Perfume Shop</p>
+</footer>
+
+<!-- Scripting Section -->
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./app/add.js"></script>
+<script type="module" src="./app/edit.js"></script>
+
+</body>
+</html>
