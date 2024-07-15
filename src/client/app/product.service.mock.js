@@ -1,4 +1,3 @@
-// product.service.mock.js
 
 
 import { Product } from './Product.js';
@@ -8,7 +7,7 @@ function createMockProductService() {
     const productsKey = 'products';
     let products = JSON.parse(localStorage.getItem(productsKey)) || [];
     let currentPage = 1;
-    const productsPerPage = 5; // Number of products per page
+    const productsPerPage = 5; 
 
     const listProducts = () => {
         const startIndex = (currentPage - 1) * productsPerPage;
@@ -40,10 +39,10 @@ function createMockProductService() {
 
     const deleteProduct = (name) => {
         const index = products.findIndex(product => product.name === name);
-        if (index === -1) return false; // Product not found
+        if (index === -1) return false; 
         products.splice(index, 1);
         saveProducts();
-        return true; // Product deleted successfully
+        return true; 
     };
 
     const saveProducts = () => {

@@ -1,4 +1,3 @@
-// product.service.js
 
 export function createProductService(host, apikey) {
     return new ProductService(host, apikey);
