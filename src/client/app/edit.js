@@ -1,6 +1,8 @@
-import productService from './product.mock.service.js';
+//import productService from './product.mock.service.js';
 import { Product } from './Product.js';
-import { validateProductForm } from './add.js'; 
+import { createMockProductService } from './product.service.mock.js';
+import { createProductService } from './product.service.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('productForm');
@@ -22,25 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('productDescription').value = product.description;
         }
 
-        form.addEventListener('submit', (event) => {
+        form.addEventListener('submit', async (event) => {
             event.preventDefault();
             // Get updated values from form fields
             const name = document.getElementById('productName').value.trim();
             const price = document.getElementById('productPrice').value.trim();
             const stock = document.getElementById('productStock').value.trim();
             const description = document.getElementById('productDescription').value.trim();
-            const volume = document.getElementById('productVolume').value.trim();
-            const brand = document.getElementById('productBrand').value.trim();
 
             // Validate the form inputs using the function from add.js
-            if (!validateProductForm(name, price, stock, description, volume, brand)) {
+            if (!validateProductForm(name, price, stock, description)) {
                 return;
             }
 
             // Create updated product object
-            const updatedProduct = new Product(name, price, stock, description, volume, brand);
+            const updatedProduct = new Product(name, price, stock, description);
             // Update the product
-            if (productService.editProduct(productName, updatedProduct)) {
+            if (await productService.editProduct(productName, updatedProduct)) {
                 alert('Product updated successfully!');
                 window.location.href = 'list.html';
             } else {
