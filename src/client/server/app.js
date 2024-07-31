@@ -1,6 +1,6 @@
 import express, { request, response } from 'express';
 //import { router } from './routes/router.js';
-//import { animalRoutes } from './routes/animal.js';
+//import { animalRoutes } from './routes/product.js';
 import mongoose from 'mongoose';
 //import { LoggingMiddleware } from './middleware/logging.js'
 //import { logger } from './utils/logger.js';
@@ -22,7 +22,7 @@ server.use('/node_modules', express.static(import.meta.dirname + '/../../node_mo
 // tell the server to use our imported router 
 //server.use(router);
 server.use(ErrorHandlingMiddleware);
-// server.use(animalRoutes);
+// server.use(productRoutes);
 server.use((error, request, response, next) =>{
 
   const {message, stack } = error;

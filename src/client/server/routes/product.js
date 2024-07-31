@@ -1,29 +1,29 @@
 import express, { request, response } from 'express';
-import AnimalsCreateController from '../controllers/animals/create.js';
-import AnimalsRetrieveController from '../controllers/animals/retrieve.js';
-import AnimalsUpdateController from '../controllers/animals/update.js';
-import AnimalsDeleteController from '../controllers/animals/delete.js';
-import AnimalsSearchController from '../controllers/animals/search.js';
+import ProductCreateController from '../controllers/Product/create.js';
+import ProductRetrieveController from '../controllers/Product/retrieve.js';
+import ProductUpdateController from '../controllers/Product/update.js';
+import ProductDeleteController from '../controllers/Product/delete.js';
+import ProductSearchController from '../controllers/Product/search.js';
 import { CheckValidation } from '../middleware/validation.js'
 
 
-export const animalRoutes = express.Router();
+export const productRoutes = express.Router();
 
 
-animalRoutes.get('/animals',CheckValidation(AnimalsSearchController.rules), AnimalsSearchController.handle);
+productRoutes.get('/Product',CheckValidation(ProductSearchController.rules), ProductSearchController.handle);
 // Create
 
-animalRoutes.post('/animals', AnimalsCreateController.handle);
+productRoutes.post('/Product', ProductCreateController.handle);
 // Retrieve
 
-animalRoutes.get('/animals/:animalId', AnimalsRetrieveController.handle);
+productRoutes.get('/Product/:productId', ProductRetrieveController.handle);
 
 // Update
 
-animalRoutes.put('/animals/:animalId', (request, response, next) => {
-    response.end(`update animal with id: ${request.params.animalId}`)
+productRoutes.put('/Product/:productId', (request, response, next) => {
+    response.end(`update product with id: ${request.params.productId}`)
 });
 // Delete
-animalRoutes.delete('/animals/:animalId', (request, response, next) => {
-    response.end(`update animal with id: ${request.params.animalId}`)
+productRoutes.delete('/Product/:productId', (request, response, next) => {
+    response.end(`update product with id: ${request.params.productId}`)
 });

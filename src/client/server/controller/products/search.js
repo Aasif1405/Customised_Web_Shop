@@ -1,5 +1,5 @@
 import { response } from 'express';
-import Animal from '../../models/Animal.js';
+import Product from '../../models/Product.js';
 
 const rules = checkSchema({
     page: {
@@ -18,7 +18,7 @@ const handle = async (request, reponse, next) => {
 
         const { page = 1, perPage = 5 } = request.query;
 
-        const count = await Animal.countDocuments();
+        const count = await Product.countDocuments();
         const pages = Math.ceil(count / perPage);
 
         const pagination = {
@@ -40,7 +40,7 @@ const handle = async (request, reponse, next) => {
             }
         };
 
-        const records = await Animal.find(where, fields, opts);
+        const records = await Product.find(where, fields, opts);
         response.json({ pagination, records });
 
 

@@ -5,10 +5,10 @@ export const router = express.Router();
 
 //  import routes from the sub-router
 //import { contentRoutes } from './content.js';
-import { animalRoutes } from './animals.js';
+import { productRoutes } from './product.js';
 
 
 // apply the sub-router to the main router
 //router.use(contentRoutes);
-router.use('/api', animalRoutes);
+router.use('/api', productRoutes);
 

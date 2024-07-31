@@ -1,18 +1,17 @@
 import { response } from "express";
-import Animal from "../../models/Animal.js";
+import Product from "../../models/Product.js";
 import { NotFoundError } from '../../errors/NotFoundError.js';
 
 const handle = async (request, reponse, next) => {
     try{
-        // Animal.findOneAndUpdate(...) //https://mongoosejs.com/docs/tutorial/
-        // Animal.findOneAndDelete(...)
-        const animal = Animal.findOne({
-            _id: request.params.animalId
+
+        const product = Product.findOne({
+            _id: request.params.productId
         });
-        if (!animal) {
-            throw new NotFoundError('Could not find that animal.')
+        if (!product) {
+            throw new NotFoundError('Could not find that product.')
         }
-        response.json(animal);
+        response.json(product);
     } catch (error) {
         next(error);
 

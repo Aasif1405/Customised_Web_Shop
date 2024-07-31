@@ -1,4 +1,9 @@
 import { model, Schema } from 'mongoose';
+import Float from 'mongoose-float'; // Importing mongoose-float
+
+// Load the Float type into mongoose
+const FloatType = Float.loadType(mongoose, 2); 
+// The second argument is the precision, here it is set to 2 decimal places
 
 // Define the fields we want to see in the database
 const fields = {
@@ -6,19 +11,15 @@ const fields = {
         type: String,
         required: true
     },
-    breed: {
-        type: String,
+    cost: {
+        type: FloatType,
         required: true
     },
-    legs: {
+    stock: {
         type: Number,
         required: true
     },
-    eyes: {
-        type: String,
-        required: true
-    },
-    sound: {
+    description: {
         type: String,
         required: true
     },
@@ -32,4 +33,4 @@ const fields = {
 const schema = new Schema(fields);
 
 // Use it to create and export a new model named 'Animal'
-export default model('Animal', schema);
+export default model('Product', schema);
