@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is the project repository for my project and my shop website.",
   "type": "module",
-  "main": "server/app.js",
+  "main": "/server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server/app.js"

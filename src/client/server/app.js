@@ -1,6 +1,6 @@
 import express, { request, response } from 'express';
 //import { router } from './routes/router.js';
-//import { animalRoutes } from './routes/product.js';
+//import { productRoutes } from './routes/product.js';
 import mongoose from 'mongoose';
 //import { LoggingMiddleware } from './middleware/logging.js'
 //import { logger } from './utils/logger.js';
@@ -20,7 +20,7 @@ server.use(express.static(`${import.meta.dirname}/../client`));
 server.use('/node_modules', express.static(import.meta.dirname + '/../../node_modules'));
 
 // tell the server to use our imported router 
-//server.use(router);
+server.use(router);
 server.use(ErrorHandlingMiddleware);
 // server.use(productRoutes);
 server.use((error, request, response, next) =>{
@@ -63,4 +63,8 @@ server.use((error, request, response, next) =>{
    process.exit(1);
 
  };
+
+
+
+
 
