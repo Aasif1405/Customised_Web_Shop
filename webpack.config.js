@@ -3,7 +3,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import loader from 'sass-loader';
+import  'sass-loader';
 
 
 const isProduction = process.env.NODE_ENV == 'production';

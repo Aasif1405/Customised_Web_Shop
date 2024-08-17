@@ -1,0 +1,41 @@
+<main class="container">
+    <video src="img/video-01.mp4" muted loop autoplay class="back_video"></video>
+    <div class="container">
+        <h1>Add New Perfume</h1>
+        <div class="row justify-content-lg-center">
+            <form id="productForm" class="col-lg-6 col-md-8 col-sm-10">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Perfume Name</span>
+                    <input type="text" class="form-control" id="productName" name="productName" required>
+                    <p class="text-danger d-none">Please enter a name for the perfume.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Brand</span>
+                    <input type="text" class="form-control" id="productBrand" name="productBrand" required>
+                    <p class="text-danger d-none">Please enter the brand of the perfume.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Volume (ml)</span>
+                    <input type="number" class="form-control" id="productVolume" name="productVolume" required>
+                    <p class="text-danger d-none">Please enter the volume of the perfume in milliliters.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Price ($)</span>
+                    <input type="number" class="form-control" id="productPrice" name="productPrice" step="0.01" required>
+                    <p class="text-danger d-none">Please enter a valid price for the perfume.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Description</span>
+                    <textarea class="form-control" id="productDescription" name="productDescription" rows="3" required></textarea>
+                    <p class="text-danger d-none">Please enter a description for the perfume.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Stock</span>
+                    <input type="number" class="form-control" id="productStock" name="productStock" required>
+                    <p class="text-danger d-none">Please enter the stock quantity.</p>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Perfume</button>
+            </form>
+        </div>
+    </div>
+</main>

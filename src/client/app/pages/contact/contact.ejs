@@ -1,47 +1,28 @@
-<div class="container">
+<main class="container">
+    <!-- Background Video -->
+    <video src="img/video-01.mp4" muted loop autoplay class="back_video"></video>
+    <!-- Main Content -->
     <h1>Contact Us</h1>
-
-    <p>In your assignment, you'll have to put some text here to describe for what reasons someone might want to fill out
-        this form.</p>
-    <hr>
-
-    <form id="contact-form">
-        <div class="mb-2">
-            <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+    <div class="row justify-content-lg-center">
+        <form id="contactForm" class="col-lg-6 col-md-8 col-sm-12" method="POST">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input type="text" id="fullName" name="fullName" class="form-control" aria-describedby="fullName" aria-label="Full Name" required>
             </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Your Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Contact Number</span>
+                <input type="text" id="contactNumber" name="contactNumber" class="form-control" aria-describedby="contactNumber" aria-label="Contact Number" required>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Your E-mail Address</label>
-                <input type="email" class="form-control" id="email" name="email">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email Address</span>
+                <input type="email" id="emailAddress" name="emailAddress" class="form-control" aria-describedby="emailAddress" aria-label="Email Address" required>
             </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Message</span>
+                <textarea id="message" name="message" class="form-control" aria-describedby="message" aria-label="Your Message" required></textarea>
             </div>
-            <div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-        </div>
-    </form>
-
-    <hr>
-</div>
-
-<div id="message-container" class="container">
-    <% if(messages.length) { %>
-        <% for (let message of messages) { %>
-            <div class="card my-2 p-2">
-                <p class="m-0">
-                    <strong><%= message.name %> says:</strong>&nbsp;<%= message.message %>
-                </p>
-            </div>
-        <% } %>
-    <% } else { %>
-        <div class="alert alert-warning">There are no messages for you.</div>
-    <% } %>
-</div>
+            <button id="submitButton" type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i> Submit</button>
+            <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo-alt"></i> Cancel</button>
+        </form>
+    </div>
+</main>

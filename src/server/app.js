@@ -2,9 +2,9 @@ import express, { request, response } from 'express';
 //import { router } from './routes/router.js';
 //import { productRoutes } from './routes/product.js';
 import mongoose from 'mongoose';
-//import { LoggingMiddleware } from './middleware/logging.js'
-//import { logger } from './utils/logger.js';
-//import { ErrorHandlingMiddleware } from './middleware/errorHandling.js';
+import { LoggingMiddleware } from './middleware/logging.js'
+import { logger } from './utils/logger.js';
+import { ErrorHandlingMiddleware } from './middleware/errorHandling.js';
 
 const PORT = 3000;
 // 
@@ -13,7 +13,7 @@ const server = express();
 server.use(express.json());
 
 // tell express the use our new logger
-//server.use(LoggingMiddleware);
+server.use(LoggingMiddleware);
 
 // 
 server.use(express.static(`${import.meta.dirname}/../../dist`));
@@ -21,7 +21,7 @@ server.use('/node_modules', express.static(import.meta.dirname + '/../../node_mo
 
 // tell the server to use our imported router 
 //server.use(router);
-//server.use(ErrorHandlingMiddleware);
+server.use(ErrorHandlingMiddleware);
 // server.use(productRoutes);
 server.use((error, request, response, next) =>{
 
